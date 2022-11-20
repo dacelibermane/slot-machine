@@ -26,7 +26,7 @@ $combinations = [
 
 
 $symbols = ["@" => 1, 'A' => 2, 'Q' => 1, "#" => 4, "*" => 5];
-$linesPayout = [3 => 1, 4 => 2, 5 => 3];
+$linePayout = [3 => 1, 4 => 2, 5 => 3];
 $userCoins = 0;
 $creditsPerSpin = 5;
 
@@ -88,9 +88,9 @@ while (true) {
             $counter++;
         }
         if ($counter >= 3) {
-            $moneyWon += $symbols[$symbol] * ($linesPayout[$counter] + $creditsPerSpin);
+            $moneyWon += $symbols[$symbol] * ($linePayout[$counter] + $creditsPerSpin);
             var_dump($symbols[$symbol]);
-            var_dump($linesPayout[$counter] );
+            var_dump($linePayout[$counter] );
         }
     }
 
